@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    /* background-image: linear-gradient(to right, #ffecd2 20%, #fcb69f 100%); */
+    background-image:  repeating-radial-gradient(circle at 0 0, transparent 0, #fcb69f 100px), repeating-linear-gradient(#ffecd2, #a4a68e);
+    background-color: #f8906d;
+    transition: all 1s;
+}
+.dark{
+    background-image:  repeating-radial-gradient(circle at 0 0, transparent 0, #918f8f 100px), repeating-linear-gradient(#41413f, #414140);
+    background-color: #ffffff;
+    transition: all 1s;
+}
+#toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    z-index: 1000;
+  }
+.container{
+    width: 100%;
+    max-width: 450px;
+    min-width: 280px;
+    border: 2px solid rgb(255, 177, 177);
+    border-radius: 1.2rem;
+    padding: 2rem 1.2rem;
+    box-shadow: 13px 17px 16px 4px rgba(61,58,49,0.93);
+    backdrop-filter: blur(10px);
+    transition: all 1s;
+}
+.dark .container{
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0 10px 8px rgba(175, 174, 172, 0.93);
+    transition: all 1s;
+
+}
+h2{
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #BF1A2F;
+    /* text-decoration: dotted underline; */
+    text-shadow: 4px -2px 8px #636161;
+}
+.dark h2{
+    color: #dddbdd;
+}
+textarea{
+    padding: 10px;
+    font-size: 1.2rem;
+    resize: vertical;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 0.8rem;
+    border-radius: 10px;
+    background-color: #daeafd;
+    color: rgb(54, 18, 87);
+    outline: none;
+}
+textarea::placeholder{
+    color: #454E9E;
+    font-size: 0.8rem;
+}
+button {
+    float: right;
+    align-items: center;
+    appearance: none;
+    background-color: #414141;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgb(236, 232, 232) 0 2px 4px,
+      rgba(255, 255, 255, 1) 0 7px 13px -3pxrgb(161, 155, 155)5f 0 -3px 0 inset;
+    color: #ecedf7;
+    cursor: pointer;
+    display: inline-flex;
+    height: 36px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow 0.15s, transform 0.15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+  }
+  
+  button:focus {
+    box-shadow: #9b9291 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+      rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #babad3 0 -3px 0 inset;
+  }
+  
+  button:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+      rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    box-shadow: #d6d6e7 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+/* textarea:focus{
+    border: red;
+} */
+
+@media screen and (max-width: 480px) {
+    body{
+        padding: 0 30px;
+    }
+    .container{
+        min-width: 100%;
+    }
+}
+@media screen and (max-width: 380px) {
+    h2{
+        font-size: 1rem;
+    }
+    textarea{
+        font-size: 0.8rem;
+    }
+    textarea::placeholder{
+        font-size: 0.86rem;
+    }
+    h3{
+        font-size: 0.8rem;
+    }
+    span a:hover {
+        font-size: 2rem;
+    }
+}
